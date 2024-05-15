@@ -1,0 +1,134 @@
+/*adding the shimmering effect on the title*/
+@keyframes shimmer {
+  50% {
+    background-position: -500px 0;
+  }
+  100% {
+    background-position: 500px 0;
+  }
+}
+
+/*adding the background picture make the aspect ratio to stay the same and fill the web page*/
+:root {
+  background-image: url("../public/background.jpg");
+  background-size: cover;
+  padding: 20px;
+  overflow: auto;
+  background-attachment: fixed;
+}
+
+/*styling and positioning the title*/
+#title h1 {
+  font-family: "Agency FB", sans-serif;
+  font-size: 150px;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 0%;
+
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+
+  background: linear-gradient(to right, #ffffff, #515150);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  animation: shimmer 10s infinite;
+  cursor: pointer;
+}
+
+/*adding theh hover effect when the cursor is placed on the title*/
+#title h1:hover {
+  color: #e0e0e01a;
+  text-shadow: 0 0 20px #e0e0e021;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+/*remove the link's underline from the title*/
+.title-link {
+  text-decoration: none;
+}
+
+/*adjusting the position of the search bar*/
+.search-wrapper {
+  display: flex;
+  justify-content: center;
+  margin: 20px;
+}
+
+/*styling and positioning the search bar*/
+#search {
+  width: 60%;
+  padding: 10px;
+  font-size: 20px;
+  border: 2px solid #fff;
+  background-color: transparent;
+  color: white;
+  outline: none;
+}
+
+/*making the search bar effect to change when the user click on it to input*/
+#search:focus {
+  border-color: #515150;
+  box-shadow: 0 0 8px 0 rgba(237, 237, 237, 0.8);
+}
+
+/*give some time for the effect to show*/
+#search,
+.search-wrapper label {
+  transition: all 0.3s ease;
+}
+
+/*styling and positioning the entity clickitem*/
+.entity {
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.6);
+  margin: 5px 20%;
+  padding: 15px;
+  transition: box-shadow 0.3s ease;
+  display: flex;
+  text-decoration: none;
+}
+
+/*adding the effect when the cursor is placed on the entity*/
+.entity:hover {
+  transform: scale(1.5);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
+}
+
+/*styling the text of the entity*/
+.entity a {
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  width: 100%;
+  font-family: "Agency FB", sans-serif;
+  font-size: 20px;
+}
+
+/*adding the background color of the detail*/
+.Detail {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+/*styling and positioning the title of the detail*/
+.Detail h1 {
+  color: white;
+  text-align: center;
+  font-family: "Agency FB", sans-serif;
+  font-size: 50px;
+}
+
+/*styling and positioning the paragraph of the detail*/
+.Detail p {
+  color: white;
+  font-family: "Agency FB", sans-serif;
+  font-size: 30px;
+  padding-left: 20px;
+}
+
+/*styling and positioning the unordered list of the detail*/
+.Detail ul {
+  color: white;
+  font-family: "Agency FB", sans-serif;
+  font-size: 30px;
+  padding-left: 20px;
+}
